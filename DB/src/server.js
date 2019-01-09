@@ -3,13 +3,13 @@ const cors = require('cors')
 
 const app = express()
 
-const userRoutes = require('./routes/users')
+const empleadoRoutes = require('./routes/empleados/empleados')
 
 app.use(cors())
 app.use(express.json())
 
 
-app.use('/users', userRoutes)
+app.use('/empleados', empleadoRoutes)
 
 app.get('/', (req, res) => {
   res.json({
